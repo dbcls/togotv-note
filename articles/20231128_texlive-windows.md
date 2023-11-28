@@ -57,7 +57,7 @@ TeX Liveのインストーラーは、[Installing TeX Live over the Internet](ht
 
 ### インストーラを開いてインストールの準備をする
 インストーラを開く際に、`WindwosによってPCが保護されました` という警告が表示される場合があります。この場合は、`詳細情報` をクリックして、`実行` をクリックしてください。
-![WindwosによってPCが保護されました](/images/PC_hogo.png =400x)
+![WindwosによってPCが保護されました](/images/20231128/20231128_01.png =400x)
 
 ダウンロードしたインストーラを開くと、特定のミラーを選択する画面が表示されます。ここでは、`Asis` の項目で、`Japan` を選択します。これは、インストールするファイルをダウンロードするサーバーを選択するものです。日本国内のサーバーを選択することで、ダウンロード速度が向上します。
 
@@ -67,7 +67,7 @@ TeX Liveのインストーラーは、[Installing TeX Live over the Internet](ht
 &nbsp;
 以下が、インストーラを開いた際の画面です。`TeXworksをインストール` からチェックを外します。今回はVSCodeを用いるため、TeXworksは不要です。また、`高度な設定` から詳細な設定を変更することができますが、デフォルトのままで問題ありません。
 
-![TeX Liveのインストーラ](/images/texlive_installer.png =400x)
+![TeX Liveのインストーラ](/images/20231128/20231128_02.png =400x)
 
 :::message
 高度な設定からインストールするパッケージの量を変更することができます。デフォルトでは、`full スキーム（すべて）` となっています。このままでも問題ありませんが、インストール容量は多くなります。(7.5GBほど)
@@ -179,14 +179,14 @@ dvipdfmx test.dvi
 
 ### TeX Live側で必要な作業
 Windowsスタートメニューから、`TeX Live Manager` を開きます。`TeX Live Manager` は、TeX Liveのパッケージを管理するためのソフトウェアです。`TeX Live Manager` を開くと、以下のような画面が表示されます。
-![TeX Live Manager](/images/texlive_manager.png =500x)
+![TeX Live Manager](/images/20231128/20231128_03.png =500x)
 パッケージリストから「すべて」を選択して、検索で `latexmk` を入力します。出てきた2つのパッケージ `latexmk` `latexmk.win32` を選択してインストールします。このように、 `TeX Live Manager` を用いてパッケージを後から追加できます。
 
 ### VSCodeのインストールをする
 次に、Microsoftが提供する高機能テキストエディタであるVSCodeをインストールします。VSCodeは、[公式サイト](https://code.visualstudio.com/)からダウンロードすることができます。
 
 VSCodeの日本語化などは拡張機能（Extensions）を追加して行えます。VSCodeの拡張機能は、左側のアイコンから拡張機能のアイコンをクリックすることで開くことができます。また、`Ctrl`+ `Shift` + `X` でも開くことができます。
-![japanese](/images/japanese.png =1000x)
+![japanese](/images/20231128/20231128_04.png =1000x)
 *日本語化を行う拡張機能*
 
 ### VSCodeにLaTeX Workshopをインストールする
@@ -200,7 +200,7 @@ LaTeX Workshopをインストールしたら、VSCodeの設定を変更します
 
 設定画面の右上にあるアイコン群のうち、▶の右にあるファイルアイコンをクリックすると、`setting.json` が開きます。`setting.json` に以下の設定を追加します。
 
-![setting](/images/setting.png =1000x)
+![setting](/images/20231128/20231128_05.png =1000x)
 *`setting.json`を開くアイコンは▶の右です*
 
 `setting.json` で編集する内容は、[動画の概要欄](https://togotv.dbcls.jp/20230301.html)からダウンロードすることができます。
@@ -333,7 +333,7 @@ VSCode上でTeXファイルを開きます。TeXファイルを開くと、VSCod
 
 `Build LaTeX project` をクリックすると、TeXファイルがコンパイルされます。コンパイルが無事に成功すると、`out` フォルダ内にPDFファイルが作成されています。また、`View LaTeX PDF` をクリックすると、既定のビュアーでPDFファイルが表示されます。
 
-![VSCode](/images/latex_build.png =500x)
+![VSCode](/images/20231128/20231128_06.png =500x)
 
 # ローカルにLaTeX環境を構築するメリット
 ローカルにLaTeX環境を構築することで、以下のようなメリットがあります。
@@ -343,9 +343,9 @@ VSCode上でTeXファイルを開きます。TeXファイルを開くと、VSCod
 - __VSCodeのスニペット機能を用いて、オリジナルのひな型を作成できる__
 - __VSCodeの強力な補完機能によって、執筆時にエラーを起こしにくくなる__
 
-個人的にはVSCodeの強力な補完機能を用いることができるのが一番のメリットだと思います。
+個人的にはVSCodeの強力な拡張機能を用いることができるのが一番のメリットだと思います。
 カッコの対応を色で表示する拡張機能や、LaTeX Workshopの `math preview` 機能を用いると、さらに執筆が捗るため、興味のある方はぜひ試してみてください。
 
-![VSCode](/images/math_preview.png =1000x)
+![VSCode](/images/20231128/20231128_07.png =1000x)
 *`math preview`機能を用いると、ファイルをコンパイルせずに数式が表示されます。
 個人的にはVSCodeで環境構築をする一番のメリットだと思います。*
